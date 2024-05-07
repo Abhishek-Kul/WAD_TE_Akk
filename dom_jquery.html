@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Updating DOM using jQuery</title>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+<script>
+$(document).ready(function(){
+    // Function to update the text of an element with id="example"
+    $("#updateButton").click(function(){
+        $("#example").text("DOM updated using jQuery!");
+    });
+
+    // Function to add a new list item to an unordered list
+    $("#addButton").click(function(){
+        $("<li>New Item</li>").appendTo("#list");
+    });
+
+    // Function to remove the last list item from an unordered list
+    $("#removeButton").click(function(){
+        $("#list li:last-child").remove();
+    });
+});
+</script>
+
+</head>
+<body>
+
+<h2>Updating DOM using jQuery</h2>
+
+<p id="example">This is an example paragraph.</p>
+
+<button id="updateButton">Update Text</button>
+
+<h3>Manipulating Lists</h3>
+
+<ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+<button id="addButton">Add Item</button>
+<button id="removeButton">Remove Last Item</button>
+
+</body>
+</html>
